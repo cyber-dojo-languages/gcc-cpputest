@@ -23,5 +23,7 @@
   "progress_regexs" : [
     "Errors \(.* ms\)",
     "OK \(.* ms\)"
-  ]
+  ],
+
+  "runner_choice": "stateful"
 }

@@ -1,4 +1,4 @@
-FROM  cyberdojofoundation/gcc:7.1
+FROM  cyberdojofoundation/gcc:7.2
 LABEL maintainer=jon@jaggersoft.com
 
 RUN apt-get update

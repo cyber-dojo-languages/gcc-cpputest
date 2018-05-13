@@ -18,7 +18,7 @@
     "untitledTest.cpp"
   ],
 
-  "filename_extension": [ ".c", ".h" ],
+  "filename_extension": [ ".c", ".h", ".cpp" ],
 
   "progress_regexs" : [
     "Errors \(.* ms\)",

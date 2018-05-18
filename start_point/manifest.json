@@ -20,6 +20,8 @@
 
   "filename_extension": [ ".c", ".h", ".cpp" ],
 
+  "hidden_filenames": [ "objs/" ],
+
   "progress_regexs" : [
     "Errors \(.* ms\)",
     "OK \(.* ms\)"

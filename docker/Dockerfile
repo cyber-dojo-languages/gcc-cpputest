@@ -1,4 +1,4 @@
-FROM  cyberdojofoundation/gcc
+FROM cyberdojofoundation/gcc
 LABEL maintainer=jon@jaggersoft.com
 
 # Note: I have tried putting the commands below into an install.sh
@@ -6,8 +6,12 @@ LABEL maintainer=jon@jaggersoft.com
 # autoreconf
 # configure.ac:11: error: required file './ltmain.sh' not found
 
-RUN apt-get update
-RUN apt-get install --yes automake autoconf libtool git
+RUN apt-get update && \
+    apt-get install --yes \
+      automake \
+      autoconf \
+      libtool \
+      git
 WORKDIR /
 RUN git clone https://github.com/cpputest/cpputest.git
 WORKDIR cpputest/

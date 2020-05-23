@@ -19,7 +19,6 @@
   "filename_extension": [ ".c", ".h", ".cpp" ],
   "max_seconds": 10,
   "tab_size": 4,
-  "hidden_filenames": [ "objs/.*" ],
   "progress_regexs" :
   [
     "Errors \(.* ms\)",

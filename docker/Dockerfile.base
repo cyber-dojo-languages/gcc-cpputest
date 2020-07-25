@@ -1,6 +1,25 @@
-FROM cyberdojofoundation/gcc:2ff63eb
+#FROM cyberdojofoundation/gcc:43a41f3
+#COPY install.sh .
+#RUN ./install.sh && rm ./install.sh
+#COPY red_amber_green.rb /usr/local/bin
+
+FROM alpine:3.12
 LABEL maintainer=jon@jaggersoft.com
 
-COPY install.sh .
-RUN ./install.sh && rm ./install.sh
-COPY red_amber_green.rb /usr/local/bin
+RUN apk add --no-cache gcc g++ musl-dev make
+RUN apk add --no-cache autoconf automake git libtool
+
+WORKDIR /
+
+RUN wget https://github.com/cpputest/cpputest/releases/download/latest-passing-build/cpputest-latest.tar.gz
+RUN tar -xf ./cpputest-latest.tar.gz
+RUN rm ./cpputest-latest.tar.gz
+RUN mv cpputest-latest cpputest
+
+WORKDIR cpputest/
+RUN autoreconf . -i
+RUN ./configure
+RUN make
+
+#apt-get remove --yes git
+#RUN apk del git

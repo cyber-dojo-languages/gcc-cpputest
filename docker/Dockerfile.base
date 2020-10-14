@@ -1,4 +1,4 @@
-FROM cyberdojofoundation/gcc:881b591
+FROM alpine:latest
 LABEL maintainer=jon@jaggersoft.com
 
 COPY install.sh .

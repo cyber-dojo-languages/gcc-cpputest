@@ -1,10 +1,7 @@
 #!/bin/bash -Eeu
 
-apt-get install --yes \
-    autoconf \
-    automake \
-    git \
-    libtool
+apk add --no-cache gcc g++ musl-dev make
+apk add --no-cache autoconf automake git libtool
 
 cd /
 
@@ -17,4 +14,5 @@ cd cpputest/
 autoreconf . -i
 ./configure
 make
-apt-get remove --yes git
+
+apk del git

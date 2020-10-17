@@ -1,6 +1,5 @@
 #!/bin/bash -Eeu
 
-apk add --no-cache gcc g++ musl-dev make
 apk add --no-cache autoconf automake git libtool
 
 cd /

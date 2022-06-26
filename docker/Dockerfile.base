@@ -1,4 +1,4 @@
-FROM cyberdojofoundation/gcc:928e1e1
+FROM cyberdojofoundation/gcc:ee0bdcd
 LABEL maintainer=jon@jaggersoft.com
 
 COPY install.sh .

@@ -1,4 +1,4 @@
-FROM cyberdojofoundation/gcc:ee0bdcd
+FROM ghcr.io/cyber-dojo-languages/gcc:064b8d0
 LABEL maintainer=jon@jaggersoft.com
 
 COPY install.sh .

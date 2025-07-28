@@ -1,6 +1,9 @@
-FROM ghcr.io/cyber-dojo-languages/ubuntu-build-essential-22-04:651ad74
+FROM ghcr.io/cyber-dojo-languages/gcc:064b8d0
 LABEL maintainer=jon@jaggersoft.com
 
-RUN apt-get install --yes cpputest
+ENV DEBIAN_FRONTEND=noninteractive
+
+COPY install.sh .
+RUN ./install.sh && rm ./install.sh
 
 COPY red_amber_green.rb /usr/local/bin
